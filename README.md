@@ -82,6 +82,19 @@
 
 ### 输入屏幕像素宽度和屏幕像素高度即可
 
+## 调整OpenCore所在的EFI分区大小至1GB
+自行搜索如何使用Disk genius调整分区大小
+
+## 复制生成的EFI文件至OpenCore（MacOS）所在的EFI分区
+若没有OpenCore，选择默认EFI分区即可
+<img width="910" alt="1" src="https://github.com/user-attachments/assets/c4507491-f443-476d-80d3-0157219e7d8c" />
+
+## 设置UEFI启动项并将其上移至最顶部
+在Disk genius工具栏的“工具”目录下
+<img width="912" alt="设置UEFI启动项" src="https://github.com/user-attachments/assets/d3ec0929-be60-43bd-a4fd-06d64f1ced65" />
+<img width="518" alt="选择所有文件" src="https://github.com/user-attachments/assets/bf3f9c58-f7ca-44c2-bbca-30f9e4d9c334" />
+<img width="581" alt="设置UEFI选项" src="https://github.com/user-attachments/assets/5ea4ca34-941f-45e9-88a4-4a3872e29bd7" />
+
 # Release说明
 <img width="1080" alt="a" src="https://github.com/user-attachments/assets/0e830d53-3b53-4743-89fe-bb8f3dfa071e" />
 下载source code即可
