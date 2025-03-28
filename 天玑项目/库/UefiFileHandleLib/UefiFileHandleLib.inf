@@ -1,0 +1,35 @@
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = UefiFileHandleLib
+  MODULE_UNI_FILE                = UefiFileHandleLib.uni
+  FILE_GUID                      = 9495D344-9D8A-41f3-8D17-E2FD238C4E71
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = FileHandleLib|DXE_DRIVER UEFI_APPLICATION UEFI_DRIVER DXE_RUNTIME_DRIVER
+
+#
+#  VALID_ARCHITECTURES           = IA32 X64 EBC
+#
+
+[Sources.common]
+  UefiFileHandleLib.c
+
+[Packages]
+  天玑项目/天玑项目.dec
+
+[LibraryClasses]
+  MemoryAllocationLib
+  BaseLib
+  BaseMemoryLib
+  DebugLib
+  PrintLib
+  PcdLib
+
+[Protocols]
+  gEfiSimpleFileSystemProtocolGuid              ## SOMETIMES_CONSUMES
+
+[Guids]
+  gEfiFileInfoGuid                              ## SOMETIMES_CONSUMES ## GUID
+
+[Pcd.common]
+  gEfi天玑项目TokenSpaceGuid.PcdUefiFileHandleLibPrintBufferSize  ## SOMETIMES_CONSUMES

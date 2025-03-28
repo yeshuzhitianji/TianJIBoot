@@ -1,0 +1,41 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = 天玑
+  FILE_GUID                      = 3E7D2831-0D47-42E1-A8A7-41688D737BC3
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+  UEFI_HII_RESOURCE_SECTION      = TRUE
+[Sources]
+  天玑.c
+  天玑.h
+[Packages]
+  天玑项目/天玑项目.dec
+
+[Guids]
+  gEfiFileInfoGuid
+  gEfiGlobalVariableGuid
+  
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootManagerLib
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  BmpSupportLib
+  BaseLib
+  ShellLib
+  DevicePathLib
+  DebugLib
+  PrintLib
+  OcDevicePathLib
+  OcFileLib
+  OcMiscLib
+  OcStringLib
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiDevicePathProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiSimpleTextInProtocolGuid

@@ -1,0 +1,32 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = UefiUsbLib
+  MODULE_UNI_FILE                = UefiUsbLib.uni
+  FILE_GUID                      = 87eb5df9-722a-4241-ad7f-370d0b3a56d7
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = UefiUsbLib|DXE_DRIVER DXE_RUNTIME_DRIVER DXE_SMM_DRIVER UEFI_APPLICATION UEFI_DRIVER
+  DESTRUCTOR                     = UefiUsbLibDestructor
+
+
+#
+#  VALID_ARCHITECTURES           = IA32 X64 EBC
+#
+
+[Sources]
+  UefiUsbLibInternal.h
+  Hid.c
+  UsbDxeLib.c
+
+[Packages]
+  天玑项目/天玑项目.dec
+
+[LibraryClasses]
+  DebugLib
+  BaseMemoryLib
+  PcdLib
+  UefiBootServicesTableLib
+
+[Pcd]
+  gEfi天玑项目TokenSpaceGuid.PcdUsbTransferTimeoutValue  ## CONSUMES
+

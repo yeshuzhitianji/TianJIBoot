@@ -1,0 +1,27 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = 显示32位Bmp图片
+  FILE_GUID                      = 2D35B5F2-6D1E-4D75-8D04-15A7F5689D32
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  显示32位Bmp图片.c
+
+[Guids]
+  gEfiFileInfoGuid
+  
+[Packages]
+  天玑项目/天玑项目.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  BaseMemoryLib
+  UefiBootServicesTableLib
+  BmpSupportLib
+
+[Protocols]
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiGraphicsOutputProtocolGuid

@@ -1,0 +1,26 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = 启动EFI程序
+  FILE_GUID                      = 0E8A4C8D-9A3A-4F3E-8C1D-7A9B1C6F3B2A
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  启动EFI程序.c
+
+[Packages]
+  天玑项目/天玑项目.dec
+  
+[Guids]
+  gEfiFileInfoGuid 
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+
+[Protocols]
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiLoadedImageProtocolGuid

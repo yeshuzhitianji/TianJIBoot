@@ -1,0 +1,28 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = 获取启动菜单
+  FILE_GUID                      = 3E7D1932-14D0-44AA-9146-8D41A5A59157
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  获取启动菜单.c
+
+[Packages]
+  天玑项目/天玑项目.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootManagerLib
+  UefiLib
+  DevicePathLib
+  DebugLib
+  PrintLib
+  MemoryAllocationLib
+
+[Guids]
+  gEfiGlobalVariableGuid
+
+[Protocols]
+  gEfiSimpleTextInProtocolGuid
